@@ -12,6 +12,13 @@ we tried to use retina net and center net to detect characters. The result may b
 ## Text recognition
 Each extracted line is resized (with padding) to image 32x800. 
 
+
+## Decode
+We use beam search + language model for decoding.
+
+## Post Processing
+
+
 ## Interesting findings
 1. position accuracy
 2. data augmentation
