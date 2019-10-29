@@ -22,15 +22,22 @@ We binarize the images to get the stroke of the characters. Then for each coordi
 
 
 
-## Interesting findings
-1. position accuracy
+## Import Points
+1. Position accuracy
+
 The CRNN model is used for recognition. It takes input with 32x800 and outputs 200x4788. The model without lstm layer has accuate position output but lower accuracy. When lstm is added, the position drifts and become inaccurate. Adding attention output as a multitask leaning objective will increase the position accuracy of CRNN.
 
-2. data augmentation
+2. Data augmentation
+
 Random brightness, contrast, distortion, scaling are added to augment the training data. 
 
-3. regularization
+3. Regularization
+
 Dropout, cutout, weight decay and early stopping are added to prevent overfitting.
+
+4. Network architecture
+
+Attention model performs worse than ctc. Resnet is better than VGG, but resnet-xt and squeeze-excitation network does not improve performance. LSTM layes more than 2 will make the position inaccurate.
 
 
 
