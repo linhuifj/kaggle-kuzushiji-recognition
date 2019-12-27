@@ -1,5 +1,7 @@
 # kaggle-kuzushiji-recognition
 
+https://www.kaggle.com/c/kuzushiji-recognition/leaderboard
+
 ## Method overview
 character detection -> get lines -> line recognition -> postprocessing
 
